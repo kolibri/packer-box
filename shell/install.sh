@@ -2,11 +2,6 @@
 
 apt-get -y update
 
- install puppet3
-wget http://apt.puppetlabs.com/puppetlabs-release-precise.deb
-dpkg -i puppetlabs-release-precise.deb
-apt-get update
-
 # install guest additions
 mount -o loop VBoxGuestAdditions.iso /media/cdrom
 sh /media/cdrom/VBoxLinuxAdditions.run
@@ -26,3 +21,9 @@ usermod -a -G vagrant vagrant
 cp /etc/sudoers /etc/sudoers.orig
 sed -i -e '/Defaults\s\+env_reset/a Defaults\texempt_group=vagrant' /etc/sudoers
 sed -i -e 's/%vagrant ALL=(ALL) ALL/%vagrant ALL=NOPASSWD:ALL/g' /etc/sudoers
+
+# install puppet3
+#wget http://apt.puppetlabs.com/puppetlabs-release-precise.deb
+#dpkg -i puppetlabs-release-precise.deb
+#apt-get update
+
