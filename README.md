@@ -3,6 +3,11 @@ Packer template
 
 This template provides a minimal configuration for a vagrant box using the virtualbox provider.
 
+Run with 
+
+	packer build template.json
+
+
 
 What is actually installed for this box
 ---------------------------------------
