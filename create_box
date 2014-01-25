@@ -2,5 +2,5 @@
 
 rm packer_virtualbox_virtualbox.box || true
 packer build -only=virtualbox template.json
-vagrant box remove p3test || true
-vagrant box add p3test packer_virtualbox_virtualbox.box
+vagrant box remove nestbox || true
+vagrant box add nestbox packer_virtualbox-iso_virtualbox.box
