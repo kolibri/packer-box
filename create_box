@@ -1,6 +1,6 @@
 #!/bin/bash
 
-#rm packer_virtualbox-iso_virtualbox.box || true
-packer build -only=virtualbox-iso template.json
-vagrant box remove nestbox || true
+rm packer_virtualbox_virtualbox.box
+packer build -only=virtualbox template.json
+vagrant box remove nestbox
 vagrant box add nestbox packer_virtualbox-iso_virtualbox.box
